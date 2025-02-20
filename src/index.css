@@ -144,8 +144,16 @@
   .overview {
     @apply absolute bottom-0 left-0 right-0 bg-black/80 text-white p-4 text-sm opacity-0 translate-y-full transition-all duration-300;
   }
-
-  .movie-card:hover .overview{
+  
+  /* 👇 Hover effect for desktop */
+  @media (hover: hover) {
+    .movie-card:hover .overview {
+      @apply opacity-100 translate-y-0;
+    }
+  }
+  
+  /* 👇 Show overview when active on mobile */
+  .movie-card.active .overview {
     @apply opacity-100 translate-y-0;
   }
 
